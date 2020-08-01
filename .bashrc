@@ -87,6 +87,8 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -119,24 +121,32 @@ fi
 # Annie stuff
 eval "$(starship init bash)"
 
+# Exports
+export LESS="eFRX"
 alias c='clear'
 alias home='cd ~/../../mnt/c/Users/annie'
 
-alias tmux="tmux -2"
+alias tmux="tmux -2 -u"
 # Languages
 alias python='python3'
 alias lua='lua5.3'
 alias love="~/../../mnt/c/Program\ Files/LOVE/lovec.exe"
+alias serve="live-server . --port=3000 --host:127.0.0.1 --cors"
+alias css-build="npx tailwindcss build css/styles.css -o css/output.css" # most common files I use
 
 # Github
-alias gadd='git add -u'
+alias gadd='git add'
+alias gaddu='git add -u'
 alias gcomm='git commit -m'
 alias gcom='gcomm'
 alias gc='gcomm'
 alias gca!='git commit --amend'
 alias gpush='git push'
+alias gpusho='git push origin'
 alias gpull='git pull'
 alias gre='git rebase -i'
-alias glog='git log'
+alias glog='git log --stat'
 alias gcp='git cherry-pick'
 alias gch='git checkout'
+# Cache  credentials for 12 hours
+alias gcache="git config --global credential.helper 'cache --timeout=43200'"
