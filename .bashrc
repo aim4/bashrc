@@ -150,3 +150,17 @@ alias gcp='git cherry-pick'
 alias gch='git checkout'
 # Cache  credentials for 12 hours
 alias gcache="git config --global credential.helper 'cache --timeout=43200'"
+export DOCKER_HOST=tcp://localhost:2375
+
+# Postgresql
+alias postgresql-start='sudo service postgresql start'
+alias postgresstart='sudo service postgresql start'
+alias postgresstop='sudo service postgresql stop'
+alias postgresql-stop='sudo service postgresql stop'
+alias postgresql-restart='sudo service postgresql restart'
+alias postgresrestart='sudo service postgresql restart'
+alias postgresconf='sudo vim /etc/postgresql/12/main/postgresql.conf'
+alias postgrespbhba='sudo vim /etc/postgresql/12/main/pg_hba.conf'
+
+# Psql - cli for postgresql
+alias psqlpostgres='sudo -u postgres psql'
