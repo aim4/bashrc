@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Set vim as default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -148,6 +152,9 @@ alias gre='git rebase -i'
 alias glog='git log --stat'
 alias gcp='git cherry-pick'
 alias gch='git checkout'
+alias gst='git status'
+alias gdiff='git diff'
+
 # Cache  credentials for 12 hours
 alias gcache="git config --global credential.helper 'cache --timeout=43200'"
 export DOCKER_HOST=tcp://localhost:2375
@@ -164,3 +171,5 @@ alias postgrespbhba='sudo vim /etc/postgresql/12/main/pg_hba.conf'
 
 # Psql - cli for postgresql
 alias psqlpostgres='sudo -u postgres psql'
+
+alias nvim="~/nvim.appimage"
